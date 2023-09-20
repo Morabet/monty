@@ -14,7 +14,7 @@ int run_cmd(stack_t **head, FILE *f, char *line, unsigned int line_number)
 	int i = 0;
 	instruction_t ops[] = {
 		{"stack", switch_stack}, {"queue", switch_queue},
-		{"push", push}, {"pop", pop}, {"pall", pall_stack},
+		{"push", push}, {"pop", pop}, {"pall", pall},
 		{"pint", pint}, {"swap", swap}, {"add", add},
 		{"sub", sub}, {"div", f_div}, {"mul", mul},
 		{"mod", mod}, {"pchar", pchar}, {"pstr", pstr},
