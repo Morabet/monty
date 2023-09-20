@@ -10,16 +10,6 @@ void rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp1, *tmp2;
 
-	if (!*stack)
-	{
-		fprintf(stderr, "L%d: can't rotl, stack too short\n", line_number);
-
-		free(info.line);
-		free_stack(stack);
-		fclose(info.file);
-		exit(EXIT_FAILURE);
-	}
-
 	if (!(*stack)->next)
 		return;
 
@@ -43,16 +33,6 @@ void rotl(stack_t **stack, unsigned int line_number)
 void rotr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp1, *tmp2;
-
-	if (!*stack)
-	{
-		fprintf(stderr, "L%d: can't rotr, stack too short\n", line_number);
-
-		free(info.line);
-		free_stack(stack);
-		fclose(info.file);
-		exit(EXIT_FAILURE);
-	}
 
 	if (!(*stack)->next)
 		return;
