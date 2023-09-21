@@ -69,21 +69,16 @@ void push_queue(stack_t **queue, int value)
  */
 void push(stack_t **head, unsigned int line_number)
 {
-	int value, i = 0, flag = 0;
+	int value;
 
 	if (info.arg)
 	{
-		if (info.arg[0] == '-')
-			i++;
-		for (; info.arg[i] != '\0'; i++)
-		{
-			if (info.arg[i] > 57 || info.arg[i] < 48)
-				flag = 1; }
-		if (flag == 1)
+		if (is_valid_num(info.arg) == 1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
-			fclose(info.file);
+			
 			free(info.line);
+			fclose(info.file);
 			free_stack(head);
 			exit(EXIT_FAILURE); 
 		}
