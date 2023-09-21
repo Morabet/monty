@@ -76,11 +76,11 @@ void push(stack_t **head, unsigned int line_number)
 		if (is_valid_num(info.arg) == 1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
-			
+
 			free(info.line);
 			fclose(info.file);
 			free_stack(head);
-			exit(EXIT_FAILURE); 
+			exit(EXIT_FAILURE);
 		}
 	}
 	else
