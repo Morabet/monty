@@ -15,7 +15,7 @@ void push_stack(stack_t **stack, int value)
 	if (!node)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		exit(0);
+		exit(EXIT_FAILURE);
 	}
 
 	if (tmp)
@@ -40,7 +40,7 @@ void push_queue(stack_t **queue, int value)
 	if (!node)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		exit(0);
+		exit(EXIT_FAILURE);
 	}
 	node->n = value;
 	node->next = NULL;
